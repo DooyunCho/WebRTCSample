@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        tools:context=".MainActivity">
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/constraint_inputs" android:layout_marginTop="8dp">
+
+        <TextView
+                android:text="IP:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_IP" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+        <EditText
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="100.100.107.209"
+                android:ems="10"
+                android:id="@+id/editText_IP"
+                android:inputType="textUri" android:textSize="14sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView_IP"
+                app:layout_constraintStart_toEndOf="@+id/textView_IP"
+                android:layout_marginStart="8dp" android:layout_marginLeft="8dp"/>
+        <TextView
+                android:text="PORT:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_port"
+                app:layout_constraintStart_toEndOf="@+id/editText_IP"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/editText_IP"/>
+        <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="7688"
+                android:ems="10"
+                android:id="@+id/editText_PORT"
+                android:textSize="14sp" app:layout_constraintStart_toEndOf="@+id/textView_port"
+                android:layout_marginStart="8dp" android:layout_marginLeft="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView_port"
+        />
+        <TextView
+                android:text="MediaOption:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_MEDIAOPTION" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/editText_IP"/>
+        <CheckBox
+                android:text="Video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/checkbox_VIDEO"
+                android:textSize="12sp"
+                android:checked="false" app:layout_constraintStart_toEndOf="@+id/textView_MEDIAOPTION"
+                android:layout_marginStart="8dp" android:layout_marginLeft="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView_MEDIAOPTION"/>
+        <CheckBox
+                android:text="Audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/checkbox_AUDIO"
+                android:textSize="12sp"
+                android:checked="true" app:layout_constraintStart_toEndOf="@+id/checkbox_VIDEO"
+                android:layout_marginStart="8dp" android:layout_marginLeft="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/checkbox_VIDEO"/>
+        <Button
+                android:text="Connect"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:id="@+id/button_CONNECT" app:layout_constraintStart_toEndOf="@+id/editText_PORT"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/editText_PORT"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                app:layout_constraintHorizontal_bias="1.0"/>
+        <Button
+                android:text="DISCONN."
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:id="@+id/button_DISCONNECT"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView_MEDIAOPTION" android:enabled="true"/>
+        <View
+                android:id="@+id/______________divider1"
+                android:layout_width="395dp"
+                android:layout_height="2dp"
+                android:background="@android:color/holo_blue_dark"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp" app:layout_constraintTop_toBottomOf="@+id/button_DISCONNECT"/>
+        <TextView
+                android:text="DN:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_DN" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/______________divider1" android:layout_marginTop="16dp"/>
+        <EditText
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="2224"
+                android:ems="10"
+                android:id="@+id/editText_DN"
+                android:textSize="14sp" app:layout_constraintStart_toEndOf="@+id/textView_DN"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView_DN" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp" android:inputType="numberSigned"/>
+        <Button
+                android:text="Register"
+                android:layout_width="100dp"
+                android:id="@+id/button_REGISTER"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp" app:layout_constraintBaseline_toBaselineOf="@+id/editText_DN"
+                app:layout_constraintStart_toEndOf="@+id/editText_DN" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="1.0"
+                android:layout_height="wrap_content" app:layout_constraintEnd_toStartOf="@+id/button_UNREGISTER"/>
+        <Button
+                android:text="UNREG."
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_UNREGISTER" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp" app:layout_constraintBaseline_toBaselineOf="@+id/button_REGISTER"/>
+        <View
+                android:id="@+id/______________divider2"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="@android:color/holo_blue_dark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_DN" android:layout_marginTop="8dp"/>
+        <TextView
+                android:text="Ani:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_ANI" android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/______________divider2"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
+        <EditText
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="2225"
+                android:ems="10"
+                android:id="@+id/editText_ANI"
+                app:layout_constraintStart_toEndOf="@+id/textView_ANI" android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp" app:layout_constraintBaseline_toBaselineOf="@+id/textView_ANI"
+                android:textSize="14sp" android:inputType="numberSigned"/>
+        <Button
+                android:text="Make"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_CALL"
+                app:layout_constraintBaseline_toBaselineOf="@+id/editText_ANI"
+                app:layout_constraintEnd_toStartOf="@+id/button_ANSWER" android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"/>
+        <Button
+                android:text="REJECT"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_REJECT"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/button_ANSWER"/>
+        <Button
+                android:text="ANS."
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_ANSWER"
+                android:layout_marginEnd="6dp" android:layout_marginRight="6dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/button_CALL"
+                app:layout_constraintEnd_toStartOf="@+id/button_ENDCALL"/>
+        <Button
+                android:text="CANCEL"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_CANCEL"
+                app:layout_constraintEnd_toStartOf="@+id/button_REJECT"
+                android:layout_marginEnd="7dp" android:layout_marginRight="7dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/button_REJECT"/>
+        <Button
+                android:text="REFER"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_REFER"
+                app:layout_constraintBaseline_toBaselineOf="@+id/button_REJECT"
+                app:layout_constraintEnd_toEndOf="@+id/editText_ANI"
+        />
+        <Button
+                android:text="END"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_ENDCALL"
+                app:layout_constraintBaseline_toBaselineOf="@+id/button_ANSWER"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"/>
+        <View
+                android:id="@+id/______________divider3"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="@android:color/holo_blue_dark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0" app:layout_constraintTop_toBottomOf="@+id/button_REJECT"/>
+        <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="8dp" android:id="@+id/radioGroup_RECALL" android:orientation="horizontal"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/______________divider3">
+            <RadioButton
+                    android:text="HOLD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/radio_HOLD" android:layout_weight="1"/>
+            <RadioButton
+                    android:text="UNHOLD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/radio_UNHOLD" android:layout_weight="1"
+                    android:checked="true"/>
+        </RadioGroup>
+    </android.support.constraint.ConstraintLayout>
+    <View
+            android:id="@+id/______________divider4"
+            android:layout_width="395dp"
+            android:layout_height="2dp"
+            android:background="@android:color/holo_blue_dark"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_inputs" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="8dp"/>
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraint_multi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/______________divider4">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView_multicall"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </android.support.constraint.ConstraintLayout>
+    <View
+            android:id="@+id/______________divider5"
+            android:layout_width="395dp"
+            android:layout_height="2dp"
+            android:background="@android:color/holo_blue_dark"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_multi" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="8dp"/>
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="395dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/______________divider5" android:id="@+id/constraintLayout">
+
+        <ImageButton
+                android:id="@+id/button_log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/log" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageButton
+                android:id="@+id/button_server"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/server"
+                app:layout_constraintStart_toEndOf="@+id/button_log"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageButton
+                android:id="@+id/button_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/person"
+                app:layout_constraintStart_toEndOf="@+id/button_server"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_addTurn"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                app:srcCompat="@mipmap/add"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_deleteTurn" app:layout_constraintEnd_toStartOf="@+id/button_addTurn"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                app:layout_constraintTop_toTopOf="parent" app:srcCompat="@mipmap/del"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@mipmap/modify"
+                android:id="@+id/button_modifyTurn" app:layout_constraintEnd_toStartOf="@+id/button_deleteTurn"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/textView_LOG"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="MultiLine LogView\nMultiLine LogView\nMultiLine LogView\nMultiLine LogView\nMultiLine LogView\nMultiLine LogView\nMultiLine LogView\nMultiLine LogView\nMultiLine LogView\nMultiLine LogView"
+                android:gravity="top|left" android:editable="false" android:maxLines="20"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/button_log"
+                app:layout_constraintVertical_bias="0.0"/>
+        <android.support.v7.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_height="0dp" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/button_addTurn" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/recyclerView_ice"
+                app:layout_constraintVertical_bias="0.0" android:visibility="invisible"/>
+        <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/localVideoArea" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/button_camera" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_LOG" app:layout_constraintVertical_bias="0.0"
+                android:visibility="invisible"/>
+        <FrameLayout
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:id="@+id/remoteVideoArea"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp" android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
